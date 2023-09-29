@@ -30,7 +30,6 @@ RUN apt-get update \
 		php8.2-memcached php8.2-pcov php8.2-xdebug \
 		php8.2-imagick \
 	&& php -r "readfile('https://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
-	&& curl -sLS https://deb.nodesource.com/setup_$NODE_VERSION.x | bash - \
 	&& apt-get install -y nodejs \
 	&& npm install -g npm \
 	&& curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarn.gpg >/dev/null \

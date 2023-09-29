@@ -32,6 +32,11 @@ jobs:
       # This is used to complete the identity challenge
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
+    
+    matrix:
+      os: [ubuntu:22.04]
+      php: [8.2,8.3]
+      
 
     steps:
       - name: Checkout repository
@@ -83,9 +88,9 @@ jobs:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
           platforms: linux/amd64, linux/arm64
+          file: php-${{ matrix.php }}/Dockerfile
           tags: |
-            ghcr.io/${{ github.repository }}/php-8.2:latest
-          labels: ${{ steps.meta.outputs.labels }}
+            ghcr.io/${{ github.repository }}/php-${{ matrix.php }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 

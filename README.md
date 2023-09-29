@@ -5,13 +5,13 @@
 	- Nala (modern apt replacement)
 	- ZSH
 	- Nano
-- PHP 8.2 
+- PHP 8.2, 8.3
 - PHP Extensions:
 	- Imagick
 	- PCov
 	- XDebug
 - customized ZSH, with plugins:
-	- git \
+	- git
 	- zsh-artisan
 	- zsh-autosuggestions
 	- zsh-you-should-use

@@ -20,6 +20,11 @@
 - customized P10K command prompt
 - Passwordless sudo
 
+## Uses
+Perfect for:
+- GitHub Codespaces
+- Laravel Sail
+
 ## Installation
 1. Update composer to allow pulling of the sail image from GitHub:
   ```
@@ -28,5 +33,5 @@
 2. Update your `docker-compose.yml` image reference to:
   ```yml
   laravel.test:
-    image: sail-8.2/app
+    image: ghcr.io/mikebronner/sail/php-8.2:latest
   ```

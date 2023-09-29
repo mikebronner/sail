@@ -5,7 +5,9 @@
 	- Nala (modern apt replacement)
 	- ZSH
 	- Nano
-- PHP 8.2, 8.3
+- PHP:
+	- 8.2
+	- 8.3 (some php extensions are not fully ready, including the ones listed below)
 - PHP Extensions:
 	- Imagick
 	- PCov

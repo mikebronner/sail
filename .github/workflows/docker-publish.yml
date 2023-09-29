@@ -33,6 +33,7 @@ jobs:
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-22.04]
         php: [8.2,8.3]

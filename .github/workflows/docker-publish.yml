@@ -87,7 +87,7 @@ jobs:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
           platforms: linux/amd64, linux/arm64
-          file: php-${{ matrix.php }}/Dockerfile
+          file: ./php-${{ matrix.php }}/Dockerfile
           tags: ghcr.io/${{ github.repository }}/php-${{ matrix.php }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max

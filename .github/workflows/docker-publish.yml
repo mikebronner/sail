@@ -82,8 +82,8 @@ jobs:
           platforms: linux/amd64, linux/arm64
           tags: ghcr.io/${{ github.repository }}/php-${{ matrix.php }}:latest
           provenance: true
-          cache-from: type=gha,scope:provenance
-          cache-to: type=gha,scope:provenance,mode=max
+          cache-from: type=gha,scope=provenance
+          cache-to: type=gha,scope=provenance,mode=max
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker

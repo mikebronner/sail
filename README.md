@@ -7,7 +7,7 @@
 	- Nano
 - PHP:
 	- 8.2
-	- 8.3 (some php extensions are not fully ready, including the ones listed below)
+	- 8.3 (in testing)
 - PHP Extensions:
 	- Imagick
 	- PCov
@@ -23,7 +23,7 @@
 - Passwordless sudo
 
 ## Uses
-Perfect for:
+Perfect for development in:
 - GitHub Codespaces
 - Laravel Sail
 
@@ -32,8 +32,8 @@ Perfect for:
   ```
   tba
   ```
-2. Update your `docker-compose.yml` image reference to:
+2. Update your `docker-compose.yml` image reference to (replace `<x.y>` with your desired version):
   ```yml
   laravel.test:
-    image: ghcr.io/mikebronner/sail/php-8.2:latest
+    image: ghcr.io/mikebronner/sail/php-<x.y>:latest
   ```

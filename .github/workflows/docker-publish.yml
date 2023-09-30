@@ -81,7 +81,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           platforms: linux/amd64, linux/arm64
           tags: ghcr.io/${{ github.repository }}/php-${{ matrix.php }}:latest
-          provenance: "${{ matrix.os }}-php-${{ matrix.php }}"
+          provenance: true
           cache-from: type=gha,scope:provenance
           cache-to: type=gha,scope:provenance,mode=max
 

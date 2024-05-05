@@ -20,7 +20,13 @@ env:
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
+  WWWGROUP: ${{ secrets.WWWGROUP }}
+  WWWUSER: ${{ secrets.WWWUSER }}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+  
 
 jobs:
   build:

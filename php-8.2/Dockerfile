@@ -46,7 +46,7 @@ RUN apt-get update \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN setcap "cap_net_bind_service=+ep" /usr/bin/php8.2
-
+RUN env
 RUN groupadd --force -g $WWWGROUP sail
 
 # customizations

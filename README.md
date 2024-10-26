@@ -7,7 +7,7 @@
 	- Nano
 - PHP:
 	- 8.2
-	- 8.3 (in testing)
+	- 8.3
 - PHP Extensions:
 	- Imagick
 	- PCov

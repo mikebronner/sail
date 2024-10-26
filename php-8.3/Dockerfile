@@ -11,7 +11,6 @@ WORKDIR /var/www/html
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=UTC
-ENV SUPERVISOR_PHP_COMMAND="/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan serve --host=0.0.0.0 --port=80"
 ENV SUPERVISOR_PHP_USER="sail"
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -94,9 +93,3 @@ RUN mv /home/sail/.oh-my-zsh/custom/plugins/zsh-artisan /home/sail/.oh-my-zsh/cu
 USER root
 COPY .zshrc /home/sail/.zshrc
 COPY .p10k.zsh /home/sail/.p10k.zsh
-
-## install github flow
-RUN cd /home/sail \
-	&& git clone https://github.com/datasift/gitflow \
-	&& cd gitflow \
-	&& ./install.sh
